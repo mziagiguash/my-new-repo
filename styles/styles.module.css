@@ -1,0 +1,594 @@
+/* Общий контейнер */
+.container {
+  max-width: 1728px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Хедер */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f7f7f7; /* аналог bg-neutral-50 */
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  height: 60px;
+}
+/* Верхняя панель */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandIcon {
+  display: flex;
+  align-items: center;
+}
+
+.brandName {
+  font-size: 24px;
+  font-weight: 600;
+  color: #151515;
+}
+
+/* Навигация */
+.navigation {
+  display: flex;
+  gap: 30px;
+}
+
+.navItem {
+  font-size: 16px;
+  font-weight: normal;
+  color: #151515;
+  font-family: 'PP Neue Montreal', sans-serif;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+/* Профиль и вход */
+.login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login img {
+  width: 30px;
+  height: 28px;
+}
+
+/* Frame Section */
+.frameContainer {
+  display: flex;
+  width: 24rem; /* 96px */
+  height: 8rem; /* 32px */
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.frameHeader {
+  height: 4rem; /* 16px */
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7c3aed; /* Violet-400 */
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 400;
+  font-family: 'PP Neue Montreal', sans-serif;
+  line-height: 2.5rem;
+}
+
+.frameTitle {
+  position: relative;
+}
+
+.frameContent {
+  position: absolute;
+  top: 7%;
+  left: 36%;
+  height: 8rem; /* 32px */
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frameImage {
+  width: 6rem; /* 24px */
+  height: 6rem; /* 24px */
+  position: relative;
+}
+
+.frameServices {
+  width: 24rem; /* 96px */
+  color: #7c3aed;
+  font-size: 2.25rem;
+  font-weight: 400;
+  font-family: 'PP Neue Montreal', sans-serif;
+  line-height: 2.5rem;
+}
+
+/* Top Bar */
+.topBar {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.brand {
+  display: flex; /* Используем Flexbox */
+  align-items: center; /* Выравниваем элементы по центру по вертикали */
+  gap: 16px; /* Расстояние между иконкой и текстом */
+  height: 60px; /* Задаем высоту для выравнивания */
+}
+
+.brandIcon {
+  width: 28px;
+  height: 28px;
+  background-color: #151515;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Если в иконке будет содержимое, оно будет центрировано */
+}
+
+.brandName {
+  color: #151515;
+  font-size: 16px;
+  font-family: 'PP Neue Montreal', sans-serif;
+  line-height: 1.5;
+}
+.login {
+  display: flex; /* Используем Flexbox */
+  align-items: center; /* Выравниваем элементы по вертикали */
+  height: 60px; /* Задаем фиксированную высоту */
+  gap: 17px;
+}
+
+.loginText {
+  color: #151515;
+  font-size: 16px;
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: -0.02em; /* Легкое сжатие символов, если нужно */
+}
+
+
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.navItem {
+  color: #151515;
+  font-size: 16px;
+}
+/* Контейнер слайдера */
+.sliderContainer {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(256px, 1fr)); /* 6 карточек в строке */
+  gap: 60px; /* Пробелы между карточками */
+  overflow-x: auto; /* Горизонтальная прокрутка */
+  scroll-snap-type: x mandatory; /* Для плавного скроллинга карточек */
+  scroll-behavior: smooth;
+  padding: 20px;
+  width: 100%; /* Контейнер занимает всю ширину */
+  max-width: 100%; /* Ограничение ширины контейнера */
+  box-sizing: border-box;
+}
+
+/* Карточки в слайдере */
+.sliderCard {
+  scroll-snap-align: start; /* Каждая карточка "прилипает" при прокрутке */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #F0F0F0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  width: 100%; /* Карточки занимают свою колонку */
+  min-height: 256px;
+  min-height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sliderCard:hover {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Блок с изображением */
+.sliderCard__img {
+  width: 100%;
+  height: 150px; /* Фиксированная высота для изображения */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Информация карточки */
+.sliderCard__info {
+  margin-top: 1rem;
+  justify-content: flex-end;
+}
+
+.sliderCard__title {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  min-height: auto;
+  color: #151515;
+  font-family: 'PP Neue Montreal', sans-serif;
+}
+
+
+.sliderCard__text{
+  display: none; 
+  font-family: 'PP Neue Montreal', sans-serif;
+  color: #151515;
+  min-height: auto;
+  padding: 0 0 0 20px;
+}
+
+.sliderCard__link {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #7b48f1;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.sliderCard__link:hover {
+  color: #5b32c1;
+}
+/* Стили пагинации */
+.pagination {
+  display: flex;
+  justify-content: left;
+  margin-top: 20px;
+}
+
+/* Кнопка пагинации */
+.paginationButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden; /* Скрываем по умолчанию */
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Активная пагинация */
+.paginationButton.active {
+  visibility: visible; /* Делаем видимой */
+  opacity: 1;
+  pointer-events: auto; /* Включаем взаимодействие */
+}
+
+/* Неактивная пагинация */
+.inactivePagination {
+  width: 8px;
+  height: 8px;
+  background-color: #d6d3d1; /* Цвет для неактивной кнопки */
+  border-radius: 50%;
+}
+
+/* Общие стили для бургер-меню */
+.menu {
+  display: none;
+  position: fixed;
+  top: 10px;
+  width: 59px;
+  height: 28px;
+  background-color: #121212; /* Темный фон */
+  justify-content: center;
+  align-items: center;
+  border-radius: 4%;
+  cursor: pointer;
+}
+
+.menuText {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f7f0f0; /* Светлый текст для контраста */
+  text-align: center;
+}
+
+/* Стили для кликабельной ссылки */
+.menu__link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+/* Стили для бургер-меню при наведении */
+.menu__link:hover {
+  color: #5b32c1; /* Цвет при наведении */
+}
+
+
+/* Стили для мобильной версии */
+@media (max-width: 920px) {
+  .header {
+    width: 100%;
+    border-top: 0;
+  }
+  .frameContainer {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    position: relative;
+    padding: 0;
+    margin-bottom: 26px;
+  }
+  .frameImage {
+    display: none;
+    border-bottom: 1px solid #e1e1e1;
+  }
+.frameContent {
+  position: absolute;
+  top: 3%;
+  left: 0;
+  display: block;
+  padding: 60px 0 0px 0;
+  }
+  .frameHeader {
+    height: 0;
+    width: 100%;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .frameTitle {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    padding-left: 0;
+  }
+ 
+
+/* Для десктопов скрываем пагинацию */
+@media (min-width: 769px) {
+  .pagination {
+    display: none; /* Пагинация скрыта на десктопах */
+  }
+}
+.paginationGroup {
+  position: relative;
+  width: 40px; /* Ширина кнопки */
+  height: 8px;  /* Высота кнопки */
+}
+
+.paginationBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #d6d3d1; /* Светлый фон */
+  border-radius: 9999px;
+}
+
+.paginationForeground {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: #18181b; /* Тёмный фон */
+  border-radius: 9999px;
+}
+  /* Скрываем верхнюю панель и бренд на мобильных устройствах */
+/* Общие стили для мобильной версии */
+@media (max-width: 681px) {
+  .sliderSection {
+    width: 100%; /* Растягиваем контейнер по всей ширине */
+    max-width: 100%; /* Убираем любые ограничения на максимальную ширину */
+    box-sizing: border-box; /* Учитываем паддинги и границы в общей ширине */
+  }
+
+  .brand {
+    display: block;
+    width: calc(100% - 20px);
+  }
+
+  .brandIcon {
+    position: absolute;
+    top: 4.1%;
+    left: 2.2%;
+  }
+
+  .topBar {
+    display: block;
+  }
+
+  .brandName {
+    display: none; /* Скрываем brandName на мобильных устройствах */
+  }
+
+  .navigation, .login {
+    display: none; /* Скрываем все элементы навигации и входа на мобильных устройствах */
+  }
+
+  .mobileHeader {
+    display: flex; /* Показываем мобильное меню */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px;
+    background-color: #fff;
+  }
+
+  .frameContainer {
+    margin-top: 0%;
+    width: 100%; 
+    margin-bottom: 60px;
+  }
+
+  .frameHeader {
+    height: 28px;
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  .frameContent {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    display: block;
+    padding: 70px 0 0px 0;
+  }
+
+  .menu {
+    display: inline-flex;
+    position: absolute;
+    top: 4.1%;
+    left: 88.2%;
+  }
+
+  .menuText {
+    font-size: 16px; /* Более крупный шрифт для мобильной версии */
+    color: #f7f0f0; /* Светлый текст для мобильного меню */
+    font-family: 'PP Neue Montreal', sans-serif;
+    font-weight: lighter;
+  }
+
+  .menu {
+    background-color: #121212; /* Темный фон для мобильного меню */
+  }
+
+  /* Стили для открытого меню */
+  .menuContent {
+    background-color: #151515;
+    padding: 10px;
+    margin-top: 10px;
+    color: #fff;
+  }
+
+  .sliderContainer {
+    margin-top: 20px;
+    display: flex; /* Переход на горизонтальный скролл */
+    overflow: hidden; /* Скрываем лишние элементы */
+    padding: 0;
+    width: 100%; /* Растягиваем контейнер слайдера */
+  }
+
+  .sliderCard {
+    display: flex;
+    flex-direction: row; /* Горизонтальное расположение содержимого */
+    align-items: flex-start;
+    width: 100%; /* Карточка занимает всю ширину */
+    min-height: 212px;
+    box-shadow: none; /* Убираем лишние тени */
+    gap: 0;
+  }
+
+  .sliderCard__img {
+    width: 60px; /* Фиксированная ширина изображения */
+    height: 60px; /* Фиксированная высота изображения */
+    object-fit: cover; /* Уменьшаем изображение, сохраняя пропорции */
+    border-radius: 8px; /* Округляем углы (по желанию) */
+    margin-right: 16px;
+  }
+
+  .sliderCard__info {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1; /* Растягиваем блок с информацией */
+  }
+
+  .sliderCard__title {
+    position: absolute;
+    font-size: 1.5rem;
+    margin-top: auto;
+    top: -11px;
+    left: 20px;
+  }
+
+  .sliderCard__text {
+    display: block;
+    height: auto; 
+    width: auto;
+    position: absolute;
+    font-size: 1rem;
+    padding-top: 100px;
+    left: -21%;
+    margin: 0;
+    color: #555;
+  }
+
+  /* Показываем только активную карточку */
+  .sliderCard.hiddenCard {
+    display: none;
+  }
+
+  .sliderCard.activeCard {
+    display: flex;
+  }
+
+  .paginationButton {
+    visibility: visible; /* Показываем пагинацию на мобильных */
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+}
+@media (max-width: 558px) {
+  .menu {
+    display: inline-flex;
+    position: absolute;
+    top: 4.1%;
+    left: 86.2%;
+  }
+  .sliderCard__text {
+    left: -27%;
+  }
+  
+}
+@media (max-width: 448px) {
+  .menu {
+    display: inline-flex;
+    position: absolute;
+    top: 4.1%;
+    left: 86.2%;
+  }
+
+}
+@media (max-width: 386px) {
+  .header {
+    width: 100%;
+  }
+  .frameServices {
+    padding: 0 0 40px 0;
+    max-width: calc(100% - 20px);
+  }
+  .frameContent {
+   
+    max-width: calc(100% - 20px);
+  }
+  .sliderCard__text {
+    left: -47%;
+  }
+}
