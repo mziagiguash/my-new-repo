@@ -31,6 +31,42 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
+
+---
+
+### **2. Подключите деплой на Vercel**
+
+1. **Зайдите в [Vercel](https://vercel.com):**
+   - Авторизуйтесь через GitHub.
+
+2. **Создайте новый проект:**
+   - Нажмите "Add New Project" и выберите ваш репозиторий из списка.
+
+3. **Настройте проект:**
+   - Убедитесь, что выбран фреймворк React или Next.js.
+   - Укажите команду сборки (по умолчанию):
+     ```bash
+     npm run build
+     ```
+   - Укажите папку для деплоя (обычно `dist` или `build`, если это React).
+
+4. **Разверните проект:**
+   - Нажмите "Deploy". После завершения деплоя вы получите ссылку на сайт.
+
+5. **Добавьте ссылку на Vercel в `README.md`.**
+
+---
+
+### **3. Запушьте обновления в репозиторий**
+
+Добавьте файл `README.md` и остальные изменения в репозиторий:
+
+```bash
+git add README.md
+git commit -m "Добавлен README и подключен деплой на Vercel"
+git push
+
+
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
