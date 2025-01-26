@@ -6,12 +6,11 @@ import { cardData } from "../data/cards";
 
 const Slider = () => {
   // Используем хук управления слайдером
-  const [currentCard, setCurrentCard, goToNextCard, goToPreviousCard] =
-    useSlider(
-      cardData.length,
-      5000, // Интервал времени
-      false // Передайте true, если нужно отключить автопереключение для мобильных устройств
-    );
+  const [currentCard, setCurrentCard] = useSlider(
+    cardData.length,
+    5000, // Интервал времени
+    false // Передайте true, если нужно отключить автопереключение для мобильных устройств
+  );
 
   return (
     <div className={styles.sliderSection}>
