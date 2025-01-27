@@ -1,72 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# my-new-repo
+
+### Основные требования:
+
+1. **Кнопки слайдера**:
+    - Кликабельные, переключают между слайдерами.
+    - Кнопки должны иметь анимацию, как указано в макете.
+2. **Анимации**:
+    - Слайдер должен плавно анимироваться при переключении слайдов.
+3. **Адаптивность**:
+    - Слайдер должен быть адаптивным на разных разрешениях, которые указаны в макете.
+4. **Пререндеринг**:
+    - Слайдер должен быть пререндерен на сервере. Когда пользователь делает первый запрос, проект должен отдавать HTML с семантической версткой слайдера.
+
+### Технологии:
+
+1. **Next.js 15**:
+    - Используйте **App Router** для создания страниц и управления маршрутизацией.
+2. **TailwindCSS**:
+    - Для стилизации слайдера и обеспечения адаптивности на разных разрешениях.
+3. **TypeScript**:
+    - Обеспечьте типизацию в коде для повышения его безопасности и читабельности.
+4. **Семантическая верстка**:
+    - Слайды должны быть разметкой с правильными HTML5 тегами, такими как `<section>`, `<article>`, `<nav>`, и т. д.
+
+### Структура и требования к проекту:
+
+1. **Модули и структура**:
+    - Код должен быть разделен на модули, например: компонент слайдера, кнопки слайдера, стили и анимации.
+    - Структура должна быть чистой, расширяемой и понятной.
+2. **Документация**:
+    - В репозитории должен быть файл **README.md**, в котором будет описано, как настроить и запустить проект.
+3. **Развертывание на Vercel**:
+    - Проект должен быть развернут на **Vercel**, с автоматическим деплоем при пушах в репозиторий.
 
 ## Getting Started
+git clone https://github.com/mziagiguash/my-new-repo.git
 
-First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+
+npm start
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
-
----
-
-### **2. Подключите деплой на Vercel**
-
-1. **Зайдите в [Vercel](https://vercel.com):**
-   - Авторизуйтесь через GitHub.
-
-2. **Создайте новый проект:**
-   - Нажмите "Add New Project" и выберите ваш репозиторий из списка.
-
-3. **Настройте проект:**
-   - Убедитесь, что выбран фреймворк React или Next.js.
-   - Укажите команду сборки (по умолчанию):
-     ```bash
-     npm run build
-     ```
-   - Укажите папку для деплоя (обычно `dist` или `build`, если это React).
-
-4. **Разверните проект:**
-   - Нажмите "Deploy". После завершения деплоя вы получите ссылку на сайт.
-
-5. **Добавьте ссылку на Vercel в `README.md`.**
-
----
-
-### **3. Запушьте обновления в репозиторий**
-
-Добавьте файл `README.md` и остальные изменения в репозиторий:
-
-```bash
-git add README.md
-git commit -m "Добавлен README и подключен деплой на Vercel"
-git push
-
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Приложение доступно по адресу: [https://my-new-repo-zeta.vercel.app](https://my-new-repo-zeta.vercel.app)
